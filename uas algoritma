@@ -1,0 +1,13 @@
+import random
+
+data = [random.randint(1, 50) for _ in range(50)]
+print("Data sebelum diurutkan:", data)
+
+banyak_data = len(data)
+for i in range(banyak_data - 1):
+    for j in range(banyak_data - 1 - i):  
+        if data[j] > data[j + 1]:
+        
+            data[j], data[j + 1] = data[j + 1], data[j]
+
+print("Data setelah diurutkan:", data)
